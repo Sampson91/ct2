@@ -1,0 +1,5 @@
+torch.distributed.init_process_group(backend="nccl")
+改为gloo
+
+vit pretrain model：
+进到ct2-main/segm/model/factory.py/第一个def/_create_vision_transformer -> ctrl + 左键 ->timm库文件的vision_transformer->def _cfg->default_cfgs内有从google下载的url

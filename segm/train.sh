@@ -1,0 +1,14 @@
+python -m torch.distributed.launch
+--nproc_per_node=0
+--m segm.train
+--log-dir segm/vit-large
+--batch-size 48
+--local_rank 0
+--partial_finetune False
+--backbone vit_large_patch16_384
+--color_position True
+--add_l1_loss True
+--l1_conv True
+--l1_weight 10
+--amp
+--epochs=200

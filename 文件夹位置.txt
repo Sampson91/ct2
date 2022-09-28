@@ -1,0 +1,25 @@
+理论上路径不需要手动创建，写了如果没有路径会自己创建的函数，但或许有部分忘记加入，如果报错自己创建一下
+
+training dataset：
+segm/data/train
+注意，train里面需要有子文件夹作为分类，否则会报错
+
+testing dataset：
+segm/data/test
+test的图片直接放在test目录下就可以，不要子文件夹，否则报错
+
+test output：
+segm/data/CT2_output
+
+更改training 和 testing dataset的位置：config.yml最底下
+
+vit pretrained model(需要自己下载 或者使用readme中的链接下载):
+segm/sources中的.npz文件
+
+checkpoint:
+segm/segm/vit-large中的.pth文件
+
+print frequency 在segm/engine.py->train_one_epoch -> print_freq = 
+
+
+
